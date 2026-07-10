@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Internship Recommendation Engine</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<header class="hero">
+  <h1>AI-Based Internship Recommendation Engine</h1>
+  <p>Get personalized internship suggestions matched to your skills, education, and career goals.</p>
+</header>
+
+<main class="container">
+  <section class="form-card">
+    <h2>Your Profile</h2>
+    <form id="profileForm">
+      <label for="skills">Skills <span class="required">*</span></label>
+      <input type="text" id="skills" placeholder="e.g. python, machine learning, sql" required>
+
+      <label for="education">Education Level</label>
+      <select id="education">
+        <option value="Any Degree">Any Degree</option>
+        <option value="B.Tech" selected>B.Tech</option>
+        <option value="M.Tech">M.Tech</option>
+      </select>
+
+      <label for="experience">Experience Level</label>
+      <select id="experience">
+        <option value="Beginner" selected>Beginner</option>
+        <option value="Intermediate">Intermediate</option>
+        <option value="Advanced">Advanced</option>
+      </select>
+
+      <label for="preferred_domain">Preferred Domain</label>
+      <input type="text" id="preferred_domain" placeholder="e.g. Data Science, Web Development">
+
+      <label for="interests">Career Interests</label>
+      <input type="text" id="interests" placeholder="e.g. AI, cloud computing, research">
+
+      <label for="location">Preferred Location</label>
+      <input type="text" id="location" placeholder="e.g. Bangalore, Remote">
+
+      <button type="submit">Get Recommendations</button>
+    </form>
+  </section>
+
+  <section class="results-card">
+    <h2>Recommended Internships</h2>
+    <div id="resultsContainer">
+      <p class="placeholder">Fill in your profile and click "Get Recommendations" to see matches.</p>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <p>AI-Based Internship Recommendation Engine — Powered by TF-IDF &amp; Cosine Similarity</p>
+</footer>
+
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
